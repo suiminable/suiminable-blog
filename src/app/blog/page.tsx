@@ -4,6 +4,7 @@ import {
   DocsPage,
   DocsTitle,
 } from "fumadocs-ui/layouts/docs/page";
+import { Suspense } from "react";
 import BlogIndexClient from "@/app/blog/blog-index-client";
 import { blogSource } from "@/lib/source";
 
@@ -22,7 +23,13 @@ export default function BlogIndexPage() {
       <DocsTitle>Blog</DocsTitle>
       <DocsDescription>記事一覧です</DocsDescription>
       <DocsBody>
-        <BlogIndexClient pages={pages} />
+        <Suspense
+          fallback={
+            <div className="text-sm text-neutral-500">読み込み中...</div>
+          }
+        >
+          <BlogIndexClient pages={pages} />
+        </Suspense>
       </DocsBody>
     </DocsPage>
   );

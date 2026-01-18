@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "deploy:s3": "aws s3 sync out/ s3://suiminable-blog --delete --profile suiminable",
     "dev": "next dev",
     "start": "serve out",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
