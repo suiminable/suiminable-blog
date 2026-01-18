@@ -77,7 +77,7 @@ export default function BlogIndexClient({ pages }: BlogIndexClientProps) {
                     </time>
                   ) : null}
                   {page.tags && page.tags.length > 0 ? (
-                    <div className=" flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {page.tags.map((tag) => (
                         <TagChip key={tag}>{getTagLabel(tag)}</TagChip>
                       ))}
