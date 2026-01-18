@@ -7,7 +7,7 @@ import {
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { formatDate } from "@/lib/date";
+import { BlogDateInfo } from "@/components/blog-date-info";
 import { blogSource } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
 
@@ -24,18 +24,10 @@ export default async function BlogPostPage(
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>
-        {formatDate(page.data.date) ? (
-          <>
-            作成日 {formatDate(page.data.date)}
-            <br />
-          </>
-        ) : null}
-        {page.data.lastModified && formatDate(page.data.lastModified) ? (
-          <>
-            最終更新日 {formatDate(page.data.lastModified)}
-            <br />
-          </>
-        ) : null}
+        <BlogDateInfo
+          date={page.data.date}
+          lastModified={page.data.lastModified}
+        />
       </DocsDescription>
       <DocsBody>
         <MDX
