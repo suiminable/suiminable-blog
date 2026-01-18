@@ -1,26 +1,20 @@
-import { docs } from 'fumadocs-mdx:collections/server';
-import { type InferPageType, loader } from 'fumadocs-core/source';
+import { about, blog, social } from "fumadocs-mdx:collections/server";
+import { loader } from "fumadocs-core/source";
 
-// See https://fumadocs.dev/docs/headless/source-api for more info
-export const source = loader({
-  baseUrl: '/docs',
-  source: docs.toFumadocsSource(),
+export const blogSource = loader({
+  baseUrl: "/blog",
+  source: blog.toFumadocsSource(),
   plugins: [],
 });
 
-export function getPageImage(page: InferPageType<typeof source>) {
-  const segments = [...page.slugs, 'image.png'];
+export const aboutSource = loader({
+  baseUrl: "/about",
+  source: about.toFumadocsSource(),
+  plugins: [],
+});
 
-  return {
-    segments,
-    url: `/og/docs/${segments.join('/')}`,
-  };
-}
-
-export async function getLLMText(page: InferPageType<typeof source>) {
-  const processed = await page.data.getText('processed');
-
-  return `# ${page.data.title}
-
-${processed}`;
-}
+export const socialSource = loader({
+  baseUrl: "/social",
+  source: social.toFumadocsSource(),
+  plugins: [],
+});
