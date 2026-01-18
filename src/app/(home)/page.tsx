@@ -8,21 +8,22 @@ const getUpdatedAt = (post: BlogListItem) => post.lastModified ?? post.date;
 export default function HomePage() {
   const recentPosts: BlogListItem[] = blogSource
     .getPages()
-    .map(
-      (page): BlogListItem => ({
+    .map((page) => {
+      const post: BlogListItem = {
         url: page.url,
         title: page.data.title,
         description: page.data.description,
-        date: page.data.date,
+        date: page.data.date ?? "",
         lastModified: page.data.lastModified,
         tags: page.data.tags,
-      }),
-    )
-    .sort((first, second) => {
-      return (
-        toTimestamp(getUpdatedAt(second)) - toTimestamp(getUpdatedAt(first))
-      );
+      };
+      const updatedAt = toTimestamp(getUpdatedAt(post));
+      return { post, updatedAt };
     })
+    .sort((first, second) => {
+      return second.updatedAt - first.updatedAt;
+    })
+    .map(({ post }) => post)
     .slice(0, 2);
 
   return (
