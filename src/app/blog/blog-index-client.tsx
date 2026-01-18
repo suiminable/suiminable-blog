@@ -14,7 +14,7 @@ type BlogIndexClientProps = {
 
 export default function BlogIndexClient({ pages }: BlogIndexClientProps) {
   const searchParams = useSearchParams();
-  const tagParam = searchParams.get("tag");
+  const tagParam = searchParams?.get("tag") ?? undefined;
   const selectedTag = tagParam && isTagCode(tagParam) ? tagParam : undefined;
 
   const sortedPages = useMemo(() => {
