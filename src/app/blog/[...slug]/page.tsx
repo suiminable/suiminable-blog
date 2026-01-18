@@ -7,12 +7,15 @@ import {
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPageImage, source } from "@/lib/source";
+import { formatDate } from "@/lib/date";
+import { blogSource } from "@/lib/source";
 import { getMDXComponents } from "@/mdx-components";
 
-export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
+export default async function BlogPostPage(
+  props: PageProps<"/blog/[...slug]">,
+) {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = blogSource.getPage(params.slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
@@ -20,12 +23,24 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <DocsDescription>
+        {formatDate(page.data.date) ? (
+          <>
+            作成日 {formatDate(page.data.date)}
+            <br />
+          </>
+        ) : null}
+        {page.data.lastModified && formatDate(page.data.lastModified) ? (
+          <>
+            最終更新日 {formatDate(page.data.lastModified)}
+            <br />
+          </>
+        ) : null}
+      </DocsDescription>
       <DocsBody>
         <MDX
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
-            a: createRelativeLink(source, page),
+            a: createRelativeLink(blogSource, page),
           })}
         />
       </DocsBody>
@@ -34,21 +49,18 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
 }
 
 export async function generateStaticParams() {
-  return source.generateParams();
+  return blogSource.generateParams();
 }
 
 export async function generateMetadata(
-  props: PageProps<"/docs/[[...slug]]">,
+  props: PageProps<"/blog/[...slug]">,
 ): Promise<Metadata> {
   const params = await props.params;
-  const page = source.getPage(params.slug);
+  const page = blogSource.getPage(params.slug);
   if (!page) notFound();
 
   return {
     title: page.data.title,
     description: page.data.description,
-    openGraph: {
-      images: getPageImage(page).url,
-    },
   };
 }

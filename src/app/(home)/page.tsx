@@ -6,10 +6,10 @@ export default function HomePage() {
       <h1 className="text-2xl font-bold mb-4">Hello World</h1>
       <p>
         You can open{" "}
-        <Link href="/docs" className="font-medium underline">
-          /docs
+        <Link href="/blog" className="font-medium underline">
+          /blog
         </Link>{" "}
-        and see the documentation.
+        and see the blog.
       </p>
     </div>
   );
