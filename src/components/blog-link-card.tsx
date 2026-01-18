@@ -12,9 +12,9 @@ type BlogLinkCardProps = {
   tags?: TagCode[];
 };
 
-const toDateTime = (dateValue?: string | Date | null) => {
-  if (!dateValue) return "";
-  return dateValue instanceof Date ? dateValue.toISOString() : dateValue;
+const toDateTime = (date?: string | Date | null) => {
+  if (!date) return "";
+  return date instanceof Date ? date.toISOString() : date;
 };
 
 export default function BlogLinkCard({
