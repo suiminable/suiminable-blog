@@ -12,7 +12,7 @@ export default function BlogIndexPage() {
     url: page.url,
     title: page.data.title,
     description: page.data.description,
-    date: page.data.date,
+    date: page.data.date ?? "",
     lastModified: page.data.lastModified,
     tags: page.data.tags,
   }));
