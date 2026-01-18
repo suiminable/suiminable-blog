@@ -39,6 +39,19 @@ export const about = defineDocs({
   },
 });
 
+export const social = defineDocs({
+  dir: "content/social",
+  docs: {
+    schema: frontmatterSchema,
+    postprocess: {
+      includeProcessedMarkdown: true,
+    },
+  },
+  meta: {
+    schema: metaSchema,
+  },
+});
+
 export default defineConfig({
   plugins: [lastModified()],
   mdxOptions: {

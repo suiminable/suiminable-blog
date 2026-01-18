@@ -19,7 +19,7 @@ export function baseOptions(): BaseLayoutProps {
       },
       {
         text: "Socials",
-        url: "/socials",
+        url: "/social",
         secondary: false,
       },
     ],
