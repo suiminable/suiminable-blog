@@ -1,19 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
+import BlogLinkCard from "@/components/blog-link-card";
 import TagChip from "@/components/tag-chip";
-import { formatDate, toTimestamp } from "@/lib/date";
-import { getTagLabel, isTagCode, TAGS, type TagCode } from "@/lib/tags";
-
-type BlogListItem = {
-  url: string;
-  title: string;
-  description?: string;
-  date: string;
-  tags?: TagCode[];
-};
+import type { BlogListItem } from "@/lib/blog";
+import { toTimestamp } from "@/lib/date";
+import { isTagCode, TAGS, type TagCode } from "@/lib/tags";
 
 type BlogIndexClientProps = {
   pages: BlogListItem[];
@@ -61,37 +54,15 @@ export default function BlogIndexClient({ pages }: BlogIndexClientProps) {
           </p>
         ) : (
           sortedPages.map((page) => (
-            <Link
+            <BlogLinkCard
               key={page.url}
-              href={page.url}
-              className="block rounded-lg border border-neutral-200/40 p-5 no-underline transition hover:border-neutral-300"
-            >
-              <article>
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  {formatDate(page.date) ? (
-                    <time
-                      dateTime={page.date}
-                      className="text-xs text-neutral-500"
-                    >
-                      作成日 {formatDate(page.date)}
-                    </time>
-                  ) : null}
-                  {page.tags && page.tags.length > 0 ? (
-                    <div className="flex flex-wrap gap-2">
-                      {page.tags.map((tag) => (
-                        <TagChip key={tag}>{getTagLabel(tag)}</TagChip>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-                <h2 className="text-xl">{page.title}</h2>
-                {page.description ? (
-                  <p className="mt-2 text-sm text-neutral-500">
-                    {page.description}
-                  </p>
-                ) : null}
-              </article>
-            </Link>
+              url={page.url}
+              title={page.title}
+              description={page.description}
+              createdAt={page.date}
+              updatedAt={page.lastModified}
+              tags={page.tags}
+            />
           ))
         )}
       </div>

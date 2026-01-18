@@ -13,6 +13,7 @@ export default function BlogIndexPage() {
     title: page.data.title,
     description: page.data.description,
     date: page.data.date,
+    lastModified: page.data.lastModified,
     tags: page.data.tags,
   }));
 
