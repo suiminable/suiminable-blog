@@ -1,0 +1,117 @@
+├─ @biomejs/biome@2.3.11
+│  ├─ licenses: MIT OR Apache-2.0
+│  ├─ repository: https://github.com/biomejs/biome
+│  ├─ publisher: Emanuele Stoppa
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@biomejs/biome
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@biomejs/biome/LICENSE-APACHE
+├─ @orama/orama@3.1.18
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/oramasearch/orama
+│  ├─ publisher: Michele Riva
+│  ├─ email: michele.riva@orama.com
+│  ├─ url: https://github.com/MicheleRiva
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@orama/orama
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@orama/orama/LICENSE.md
+├─ @orama/tokenizers@3.1.18
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/oramasearch/orama
+│  ├─ publisher: Michele Riva
+│  ├─ email: michele.riva@oramasearch.com
+│  ├─ url: https://github.com/MicheleRiva
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@orama/tokenizers
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@orama/tokenizers/LICENSE.md
+├─ @tailwindcss/postcss@4.1.18
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tailwindlabs/tailwindcss
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@tailwindcss/postcss
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@tailwindcss/postcss/LICENSE
+├─ @types/mdx@2.0.13
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/mdx
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/mdx/LICENSE
+├─ @types/node@25.0.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/node
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/node/LICENSE
+├─ @types/react-dom@19.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/react-dom
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/react-dom/LICENSE
+├─ @types/react@19.2.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/react
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/@types/react/LICENSE
+├─ fumadocs-core@16.4.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/fuma-nama/fumadocs
+│  ├─ publisher: Fuma Nama
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-core
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-core/LICENSE
+├─ fumadocs-mdx@14.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/fuma-nama/fumadocs
+│  ├─ publisher: Fuma Nama
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-mdx
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-mdx/LICENSE
+├─ fumadocs-ui@16.4.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/fuma-nama/fumadocs
+│  ├─ publisher: Fuma Nama
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-ui
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/fumadocs-ui/LICENSE
+├─ lucide-react@0.562.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/lucide-icons/lucide
+│  ├─ publisher: Eric Fennis
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/lucide-react
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/lucide-react/LICENSE
+├─ next@16.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/vercel/next.js
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/next
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/next/license.md
+├─ postcss@8.5.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/postcss
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/postcss/LICENSE
+├─ react-dom@19.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/react
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/react-dom
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/react-dom/LICENSE
+├─ react@19.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/react
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/react
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/react/LICENSE
+├─ serve@14.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/vercel/serve
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/serve
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/serve/license.md
+├─ tailwindcss@4.1.18
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tailwindlabs/tailwindcss
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/tailwindcss
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/tailwindcss/LICENSE
+├─ typescript@5.9.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/microsoft/TypeScript
+│  ├─ publisher: Microsoft Corp.
+│  ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/typescript
+│  └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/typescript/LICENSE.txt
+└─ zod@4.3.5
+   ├─ licenses: MIT
+   ├─ repository: https://github.com/colinhacks/zod
+   ├─ publisher: Colin McDonnell
+   ├─ email: zod@colinhacks.com
+   ├─ path: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/zod
+   └─ licenseFile: /home/suiminable/engineering-wsl2/suiminable-blog/node_modules/zod/LICENSE
+
