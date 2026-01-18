@@ -5,7 +5,7 @@ export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
       title: "suiminable's Blog",
-      transparentMode: "top",
+      transparentMode: "none",
     },
     links: [
       {

@@ -11,6 +11,7 @@ export default function Layout({ children }: LayoutProps<"/blog">) {
         tree={blogSource.getPageTree()}
         {...baseOptions()}
         sidebar={{ enabled: false }}
+        nav={{ enabled: false }}
       >
         {children}
       </DocsLayout>
