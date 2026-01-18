@@ -26,6 +26,19 @@ export const blog = defineDocs({
   },
 });
 
+export const about = defineDocs({
+  dir: "content/about",
+  docs: {
+    schema: frontmatterSchema,
+    postprocess: {
+      includeProcessedMarkdown: true,
+    },
+  },
+  meta: {
+    schema: metaSchema,
+  },
+});
+
 export default defineConfig({
   plugins: [lastModified()],
   mdxOptions: {
