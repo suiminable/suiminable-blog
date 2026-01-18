@@ -17,6 +17,16 @@ export const { staticGET: GET } = createFromSource(blogSource, {
         tolerance: 0,
       },
     },
+    ja: {
+      language: "japanese",
+      components: {
+        tokenizer: createTokenizer(),
+      },
+      search: {
+        threshold: 0,
+        tolerance: 0,
+      },
+    },
     en: { language: "english" },
   },
 });
