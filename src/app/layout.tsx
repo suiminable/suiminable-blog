@@ -22,18 +22,11 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "suiminable",
     type: "website",
-    images: [
-      {
-        url: "/images/avatar.jpg",
-        alt: "suiminable avatar",
-      },
-    ],
   },
   twitter: {
     card: "summary",
     title: "suiminable",
     description: "suiminable のブログ",
-    images: ["/images/avatar.jpg"],
   },
 };
 
