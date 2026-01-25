@@ -50,7 +50,7 @@ jobs:
       - name: Invalidate CloudFront cache
         env:
           CF_DIST_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        if: ${{ env.CF_DIST_ID != '' }}
+        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
         run: |
           aws cloudfront create-invalidation \
             --distribution-id $CF_DIST_ID \
