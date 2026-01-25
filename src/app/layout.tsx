@@ -17,16 +17,12 @@ export const metadata: Metadata = {
   },
   description: "suiminable のブログ",
   openGraph: {
-    title: "suiminable",
-    description: "suiminable のブログ",
     url: siteUrl,
     siteName: "suiminable",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "suiminable",
-    description: "suiminable のブログ",
   },
 };
 
