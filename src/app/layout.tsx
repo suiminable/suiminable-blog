@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Provider } from "@/components/provider";
 import "./global.css";
@@ -5,6 +6,36 @@ import "./global.css";
 const inter = Inter({
   subsets: ["latin"],
 });
+
+const siteUrl = "https://suiminable.com";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "suiminable",
+    template: "%s | suiminable",
+  },
+  description: "suiminable のブログ",
+  openGraph: {
+    title: "suiminable",
+    description: "suiminable のブログ",
+    url: siteUrl,
+    siteName: "suiminable",
+    type: "website",
+    images: [
+      {
+        url: "/images/avatar.jpg",
+        alt: "suiminable avatar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "suiminable",
+    description: "suiminable のブログ",
+    images: ["/images/avatar.jpg"],
+  },
+};
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
